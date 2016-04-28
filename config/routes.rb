@@ -4,11 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [:update]
   root to: "posts#index"
 
-  resources :posts do
-    collection do
-      get '/user_posts', to: 'posts#user_posts', as: :user
-    end
-  end
+  resources :posts 
 end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

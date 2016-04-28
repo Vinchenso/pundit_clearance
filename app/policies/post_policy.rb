@@ -1,5 +1,5 @@
 class PostPolicy < ApplicationPolicy
   def destroy?
-    user.admin? || record.User == user
+    user.admin? || record.user_id == user.id
   end
 end
