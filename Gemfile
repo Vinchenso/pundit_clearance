@@ -43,6 +43,8 @@ group :development, :test do
   gem 'pry'
   gem 'table_print'
   gem 'better_errors'
+  gem 'administrate'
+  gem "administrate-field-image"
 end
 
 group :development do
