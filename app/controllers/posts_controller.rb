@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  after_action :verfiy_authorized, only: [:destroy]
+  after_action :verify_policy_scoped, only: [:user_posts]
 
   def user_posts
       @posts = policy_scope(Post)
