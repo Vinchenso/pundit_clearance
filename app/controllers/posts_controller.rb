@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+  def user_posts
+      @posts = policy_scope(Post)
+  end
 
   # GET /posts
   # GET /posts.json
